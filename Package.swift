@@ -21,8 +21,9 @@ dep.append(
 // Enable SubprocessFoundation by default
 var defaultTraits: Set<String> = ["SubprocessFoundation"]
 #if compiler(>=6.2)
-// Enable SubprocessSpan when Span is available
-defaultTraits.insert("SubprocessSpan")
+// Enable SubprocessSpan when Span is available 
+// defaultTraits.insert("SubprocessSpan") 
+// TODO: Re-enable when Xcode 26 is unfucked
 #endif
 
 let package = Package(
