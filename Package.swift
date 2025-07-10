@@ -6,7 +6,7 @@ import PackageDescription
 var dep: [Package.Dependency] = [
     .package(
         url: "https://github.com/apple/swift-system",
-        from: "1.4.2"
+        from: "1.1.1"
     )
 ]
 #if !os(Windows)
