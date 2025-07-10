@@ -13,7 +13,7 @@ var dep: [Package.Dependency] = [
 dep.append(
     .package(
         url: "https://github.com/apple/swift-docc-plugin",
-        from: "1.4.3"
+        from: "1.4.5"
     ),
 )
 #endif
@@ -21,14 +21,13 @@ dep.append(
 // Enable SubprocessFoundation by default
 var defaultTraits: Set<String> = ["SubprocessFoundation"]
 #if compiler(>=6.2)
-// Enable SubprocessSpan when Span is available 
-// defaultTraits.insert("SubprocessSpan") 
-// TODO: Re-enable when Xcode 26 is unfucked
+// Enable SubprocessSpan when Span is available
+defaultTraits.insert("SubprocessSpan")
 #endif
 
 let package = Package(
     name: "Subprocess",
-    platforms: [.macOS(.v14)],
+    platforms: [.macOS(.v13), .iOS("99.0")],
     products: [
         .library(
             name: "Subprocess",
