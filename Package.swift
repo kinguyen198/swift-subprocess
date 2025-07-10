@@ -28,7 +28,7 @@ var defaultTraits: Set<String> = ["SubprocessFoundation"]
 
 let package = Package(
     name: "Subprocess",
-    platforms: [.macOS(.v14), .iOS(.v14)],
+    platforms: [.macOS(.v14)],
     products: [
         .library(
             name: "Subprocess",
